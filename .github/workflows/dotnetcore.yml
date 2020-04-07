@@ -38,7 +38,7 @@ jobs:
       # Get the name of the tag that was pushed
       - name: Get the version
         id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+        run: echo ::set-output name=VERSION::${$GITHUB_REF/refs\/tags\//}
 
       # Create the release:  https://github.com/actions/create-release
       - name: Create release
